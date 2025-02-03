@@ -140,8 +140,8 @@ a{
 
   .appel-notes{
     text-decoration: none;
-    color:#faadde;
-    /* background-color: #faadde; */
+    color:#e9e4d8;
+    background-color: #004b81;
   }
 
   .fig{
@@ -156,7 +156,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
 }
 
 .page-titre{
@@ -170,6 +170,25 @@ body {
     width: 100vw;
     background-color: #e9e4d8;
     z-index: 50;
+}
+
+#cliquer{
+  position:absolute;
+  bottom:10%;
+  font-family:"Caladea Regular";
+  font-size:1.2em;
+  color:#161b27;
+  margin:0;
+  animation-duration: 2s;
+   animation-name: clignoter;
+   animation-iteration-count: infinite;
+   transition: none;
+}
+
+@keyframes clignoter {
+  0%   { opacity:1; }
+  40%   {opacity:0; }
+  100% { opacity:1; }
 }
 
 .column-layout {
@@ -739,7 +758,7 @@ margin:0;
       display: flex; /* Pour centrer le contenu */
       flex-direction: column;
       justify-content: center;
-      align-items: center;
+      /* align-items: center; */
       position: fixed;
       top: 0;
       left: 0;
@@ -748,49 +767,52 @@ margin:0;
       background-color: #f5f5f5;
       z-index: 50;
       overflow: hidden;
+      padding: 0;
       /*max-width: 100vw;  Empêche tout dépassement horizontal */
     }
   
     .titre-avertissement{
       position:absolute;
-      top:5%;
+      top:1.5em;
       /* display:block; */
-      left:15%;
+      left:1.5em;
       font-family: "Wagon Bold";
       font-size: 1.5em;
       color: #d8b1ed;
       background-color: #161b27;
       /* margin: 0 3em; */
+      margin: 0;
     }
 
-    .t1{
-      /* position: absolute;
-      top:5%; */
-    }
+    /*.t1{
+       position: absolute;
+      top:5%; 
+    }*/
 
     .t2{
-      margin-top: 12%;
+      margin-top: 1.3em;
     }
 
     #sous-titre-avertissement{
       position:absolute;
-      top:10%;
+      top:4em;
       font-family: "Caladea Regular";
       font-size: 1em;
       color: #161b27;
       margin: 0;
-      padding: 3em;
+      padding: 2.3em;
+      text-align: left;
     }
 
     .texte-avertissement {
       /* display:flex;
       flex-direction: column; */
-      /* text-align: center;
-      align-items: center; */
+       text-align: center;
+      /*align-items: center; */
       font-family: "Caladea Regular", serif;
-      font-size: 1.2em;
+      font-size: 1.1em;
       color: #161b27;
-      text-align:left;
+      /* text-align:left; */
       padding: 0;
       margin: 0 3em;
     }
@@ -800,10 +822,10 @@ margin:0;
       bottom:5%;
       font-family: "Caladea Regular";
       color: #161b27;
-      bottom: 5vh;
+      bottom: 2.5em;
       font-size: 1em;
-      align-items: center;
-      text-align:center;
+      align-self: center;
+      /* text-align:center; */
       margin: 0 3em;
     }
 
