@@ -60,7 +60,7 @@ h2{
     color: #d8b1ed;
     font-size: 2em;
     margin: 5% 0;
-    scroll-margin-top: 1.5rem;
+    scroll-margin-top: 2.6em;
 }
 
 h3{
@@ -69,7 +69,7 @@ h3{
     color: #274e12;
     font-size: 1.85em;
     margin: 5% 0;
-    scroll-margin-top: 1.5rem;
+    scroll-margin-top: 2.7em;
 }
 
 h4{
@@ -78,7 +78,7 @@ h4{
     color: #004b81;
     font-size: 1.7em;
     margin: 5% 0;
-    scroll-margin-top: 1.5rem;
+    scroll-margin-top: 2.7em;
 }
 
 h5{
@@ -150,6 +150,10 @@ a{
     text-decoration: none;
   }
 
+  /* :target { cibles des ancres
+    scroll-margin-top: 500px; Décale proprement l’ancre 
+}*/
+
 /*--------- GENERAL ---------*/
 
 body {
@@ -195,7 +199,7 @@ body {
     display: flex;
     height: 100vh;
     box-sizing: border-box;
-    overflow: hidden; /* Empêche les colonnes de déborder horizontalement */
+    overflow: hidden; /* Empêche les colonnes de déborder horizontalement et verticalement */
     /* gap: 1rem; */
     /* padding: 2rem; */
     position: relative;
@@ -205,6 +209,7 @@ body {
     flex-grow: 1;
     /*width: 33.33%;  Largeur initiale */
     min-width: 200px;
+    min-height:  100%;
     overflow-x: hidden;
     overflow-y: auto;
     background-color: #f5f5f5;
@@ -521,6 +526,13 @@ margin:0;
 
 .zone-texte{
     padding: 7% 10% 5% 10%;
+    /* scroll-margin-top: 0.2rem; */
+    /* scroll-snap-type: none; */
+
+}
+
+#resume{
+  margin:0;
 }
 
 #introduction{
@@ -627,7 +639,7 @@ margin:0;
   height: auto;
   margin-top:1.5vw;
   display: block;
-  scroll-margin-top: 2rem;
+  /* scroll-margin-top: 2rem; */
   }
   
   .descriptions-oeuvres{
@@ -655,9 +667,9 @@ margin:0;
     color: #faadde;
   }
 
-  .notes{
+  /* .notes{
     scroll-margin-top: 2rem;
-  }
+  } */
 
 /* Section Bibliographie */
 
@@ -678,9 +690,9 @@ margin:0;
     color:#274e12;
   }
 
-  .bibliographie{
+  /* .bibliographie{
     scroll-margin-top: 2rem;
-  }
+  } */
 
   .highlight-bibliographie{
     color:white;
