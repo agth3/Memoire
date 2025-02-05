@@ -635,12 +635,101 @@ margin:0;
   }
 
   .section-oeuvres img{
-  max-width: 23vw;
+  width: 85%;
   height: auto;
   margin-top:1.5vw;
   display: block;
-  /* scroll-margin-top: 2rem; */
   }
+
+  .single-image {
+    width: 85%;
+    height: auto;
+    margin-top: 1.5vw;
+    display: block;
+}
+
+.carousel {
+  position: relative;
+  width: 85%; /* Largeur du carrousel */
+  max-width: 600px; /* Pour éviter qu'il ne devienne trop grand */
+  overflow: hidden;
+  
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+.carousel-container {
+  position: relative; /* Assure un positionnement correct des flèches */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  /* will-change: transform; */
+  margin: 0 -1px; /* Évite que les pixels des images voisines dépassent */
+}
+
+.carousel-track img {
+  width: 100%; /* Chaque image occupe toute la largeur */
+  height: auto; /* Garde le ratio */
+  /*flex: 0 0 100%;  Important : force chaque image à prendre toute la place */
+  object-fit: contain; /* Évite les coupures */
+  /* border: solid 3px #e9e4d8;
+  background-color: #e9e4d8; */
+  flex-shrink: 0;
+}
+
+
+
+.carousel button {
+  display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #f5f5f5;
+    color: #161b27;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 9999 !important;
+        font-size: 24px;
+    border-radius: 5px;
+    font-family: 'Caladea';
+    visibility: visible;
+}
+
+.carousel .prev {
+    left: -50px;
+}
+
+.carousel .next {
+    right: -50px;
+}
+
+
+
+  /* .img-container {
+    display: flex;
+    max-width: 25vw;
+    gap: 1vw;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .img-container img {
+    height: auto;
+    max-height: 100%;
+    flex: 1;
+    object-fit: contain; 
+  } */
+  
+  
+
+  
   
   .descriptions-oeuvres{
     height: auto;
