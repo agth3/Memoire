@@ -42,15 +42,15 @@
 h1{
     font-family: "Wagon Bold";
     margin:0;
-    background-color: #161b27;
-    color:#d8b1ed;
+    /* background-color: #161b27; */
+    color:#ffb47e;
     font-size: 6em;
 }
 
 #sous-titre{
     font-family: "Caladea Regular";
-    color:#161b27;
-    background-color:#e9e4d8;
+    color:#d8b1ed;
+    background-color:#161b27;
     font-size: 3em;
     font-weight: lighter;
 }
@@ -96,6 +96,10 @@ p{
     margin-bottom: 10%;
 }
 
+.remerciements p{
+  text-align: left;
+}
+
 
 /*--------- STYLE LIENS ---------*/
 
@@ -109,6 +113,10 @@ a{
     color: #faadde;
     background-color: #161b27;
   }
+
+  .lien:hover{
+    color: #f5f5f5;
+  }
   
   .titre-oeuvre{
     font-family: "Caladea Italic";
@@ -118,11 +126,23 @@ a{
     /* scroll-margin-top: 2rem; */
   }
   
+  .column2 a.titre-oeuvre {
+    cursor:pointer;
+  }
+
+  .column3 a.titre-oeuvre {
+    cursor:text;
+  }
+
   .artiste{
     color: #ffb47e;
     background-color: #161b27;
     text-decoration: none;
     /* scroll-margin-top: 2rem; */
+  }
+
+  .artiste:hover{
+    color: #f5f5f5;
   }
   
   .auteur{
@@ -132,6 +152,10 @@ a{
     /* scroll-margin-top: 2rem; */
   }
   
+  .auteur:hover{
+    color: #f5f5f5;
+  }
+
   .titre-ouvrage{
     font-family: "Caladea Italic";
     color: #f5f5f5;
@@ -144,10 +168,18 @@ a{
     background-color: #004b81;
   }
 
+  .appel-notes:hover{
+    color: #f5f5f5;
+  }
+
   .fig{
     color:#d8b1ed;
     background-color: #343332;
     text-decoration: none;
+  }
+
+  .fig:hover{
+    color: #f5f5f5;
   }
 
   /* :target { cibles des ancres
@@ -381,6 +413,9 @@ body {
   box-sizing: border-box;
   display: flex;
   align-items: center;
+  z-index: 10;
+  min-height:5.25vh;
+  margin:0;
 }
 
 .box-menu {
@@ -487,6 +522,132 @@ margin:0;
 .divider{
   border-top: 1px solid #161b27;
 }
+
+
+/* STYLE DE LA JAUGE DE TEXTE */
+
+.bloc-jauge-fontsize {
+  position: sticky;
+  display: inline-flex; /* Permet de gérer l'alignement interne */
+  top: 0vh;
+  background-color: #f5f5f5;
+  left: 2%;
+  z-index: 9;
+  margin: 0; /* Supprime tout décalage dû au margin */
+  padding: 0;
+  align-items: stretch; /* S'assure que T et jauge-fontsize prennent la même hauteur */
+  /*align-items: center;  Centre verticalement l'enfant */
+  justify-content: center; /* Centre aussi horizontalement si nécessaire */
+  box-shadow: 0px 5px 8px #e9e4d8;
+}
+
+
+#T {
+  box-sizing: border-box;
+  padding: 1vw;
+  font-family: 'Caladea';
+  color: #274e12;
+  font-size: 1em;
+}
+
+.bloc-jauge-fontsize:hover #T{
+  display:none;
+}
+
+.bloc-jauge-fontsize:hover .jauge-fontsize {
+  /* display: block; */
+  display: inline-flex;
+}
+
+label {
+  font-size: 0.9em;
+  font-family: 'Caladea';
+  color: #274e12;
+}
+
+label:hover{
+  color:#faadde;
+}
+
+input {
+  margin: 0.4rem;
+}
+
+.jauge-fontsize {
+  box-sizing: border-box;
+  padding: 1vw;
+  height: 100%;
+  /* margin-top:-0.25vh; */
+  box-sizing: border-box;
+  display:none;
+  align-items: center; /* Centre verticalement l'enfant */
+  justify-content: center; /* Centre aussi horizontalement si nécessaire */
+  /* position:sticky; */
+  /* top:5.25vh; */
+  background-color: #f5f5f5;
+  /* left:10%; */
+  /* z-index:9;   */
+  /* font-family: "Wagon Bold"; */
+  /* color: #274e12; */
+  /* font-size: 0.9em; */
+}
+
+/* Style de la jauge */
+#jauge {
+  -webkit-appearance: none; /* Supprime le style natif */
+  appearance: none;
+  width: 12vw;
+  height: 0.5vh;
+  margin-left:2vw;
+  background: #e9e4d8;
+  /* border-radius: 10px; */
+  /* outline: 0.1rem solid #e9e4d8; */
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+/* Changer la couleur au survol */
+#jauge:hover {
+  background: #e9e4d8;
+}
+
+/* Personnalisation du curseur (thumb) sur Webkit (Chrome, Safari, Edge) */
+#jauge::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 0.5vw; /* Taille du curseur */
+  height: 1vh;
+  background: #274e12; /* Couleur du curseur */
+  /* border-radius: 50%; */
+  cursor: pointer;
+  /* transition: transform 0.2s; */
+}
+
+/* Effet au survol du curseur */
+#jauge::-webkit-slider-thumb:hover {
+  transform: scale(1.5);
+  background: #faadde;
+}
+
+/* Personnalisation du curseur sur Firefox */
+#jauge::-moz-range-thumb {
+  width: 0.5vw;
+  height: 0.5vw;
+  background: #faadde;
+  /* border-radius: 50%; */
+  cursor: pointer;
+  /* transition: transform 0.2s; */
+}
+
+#jauge::-moz-range-thumb:hover {
+  transform: scale(1.2);
+  background: #274e12;
+}
+
+
+
+
+
 
 
 /* Gestion des barres de scroll du menu déroulant */
@@ -648,67 +809,69 @@ margin:0;
     display: block;
 }
 
-.carousel {
+/* Conteneur global qui contient tout, y compris les boutons */
+.carousel-wrapper {
   position: relative;
   width: 85%; /* Largeur du carrousel */
-  max-width: 600px; /* Pour éviter qu'il ne devienne trop grand */
-  overflow: hidden;
-  
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
+  max-width: 600px; /* Limite la taille */
+  margin: 0 auto;
 }
 
-.carousel-container {
-  position: relative; /* Assure un positionnement correct des flèches */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Conteneur du carrousel proprement dit */
+.carousel {
+  position: relative;
+  overflow: hidden; /* Masque l'excédent des images */
 }
 
+/* Track du carrousel, avec transition pour le défilement */
 .carousel-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  /* will-change: transform; */
-  margin: 0 -1px; /* Évite que les pixels des images voisines dépassent */
+  margin: 0 -1px;
 }
 
 .carousel-track img {
   width: 100%; /* Chaque image occupe toute la largeur */
-  height: auto; /* Garde le ratio */
-  /*flex: 0 0 100%;  Important : force chaque image à prendre toute la place */
-  object-fit: contain; /* Évite les coupures */
-  /* border: solid 3px #e9e4d8;
-  background-color: #e9e4d8; */
+  height: auto;
+  object-fit: contain;
   flex-shrink: 0;
 }
 
-
-
-.carousel button {
-  display: block;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #f5f5f5;
-    color: #161b27;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    z-index: 9999 !important;
-        font-size: 24px;
-    border-radius: 5px;
-    font-family: 'Caladea';
-    visibility: visible;
+/* Style des boutons de navigation */
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #d8b1ed;
+  color: #f5f5f5;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  z-index: 10; /* Les flèches seront au-dessus du carrousel */
+  font-size: 1.5em;
+  /* border-radius: 5px; */
+  font-family: 'Caladea';
 }
 
-.carousel .prev {
-    left: -50px;
+button:hover{
+  background-color: #faadde;
+  color: #f5f5f5;
 }
 
-.carousel .next {
-    right: -50px;
+button:active{
+  background-color: #ffb47e;
 }
+
+/* Position des flèches à l'extérieur du carrousel */
+.prev {
+  left: -3vw;  /* Décale la flèche gauche à l'extérieur */
+}
+
+.next {
+  right: -3vw;  /* Décale la flèche droite à l'extérieur */
+}
+
+
 
 
 
@@ -865,22 +1028,28 @@ margin:0;
       left: 0;
       width: 100vw; /* Largeur totale de l'écran */
       height: 100vh; /* Hauteur totale de l'écran */
-      background-color: #f5f5f5;
+      background-color: #e9e4d8;
       z-index: 50;
       overflow: hidden;
       padding: 0;
       /*max-width: 100vw;  Empêche tout dépassement horizontal */
     }
+
+    .bloc-titre-avertissement{
+      top:4vh;
+      position:absolute;
+      left: 8vw;
+      margin:0;
+      justify-content: space-between;
+    }
   
     .titre-avertissement{
-      position:absolute;
-      top:1.5em;
       /* display:block; */
-      left:1.5em;
+      /* left:1.5em; */
       font-family: "Wagon Bold";
       font-size: 1.5em;
       color: #d8b1ed;
-      background-color: #161b27;
+      /* background-color: #161b27; */
       /* margin: 0 3em; */
       margin: 0;
     }
@@ -891,18 +1060,30 @@ margin:0;
     }*/
 
     .t2{
-      margin-top: 1.3em;
+      margin-top: -0.25vh;
     }
 
-    #sous-titre-avertissement{
-      position:absolute;
-      top:4em;
+    .sous-titre-avertissement{
+      /* position:absolute; */
+      /* top:10vh; */
       font-family: "Caladea Regular";
       font-size: 1em;
-      color: #161b27;
-      margin: 0;
-      padding: 2.3em;
+      color: #e9e4d8;
+      background-color: #274e12;
+      margin:0;
+      margin-top: 0.5vh;
+      display: inline-block; /* Adapte la largeur à celle du texte */
+      white-space: nowrap;
+      /* left:1.5em; */
+      /* left: 8.5vw; */
+      /* margin-top: 5vw; */
+      /* padding: 2.3em; */
       text-align: left;
+    }
+
+    .st2{
+      margin:0;
+      margin-top: 0.5vh;
     }
 
     .texte-avertissement {
@@ -923,11 +1104,13 @@ margin:0;
       bottom:5%;
       font-family: "Caladea Regular";
       color: #161b27;
-      bottom: 2.5em;
+      bottom: 8vw;
       font-size: 1em;
       align-self: center;
       /* text-align:center; */
       margin: 0 3em;
+      text-align: center;
+
     }
 
   }
