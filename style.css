@@ -43,16 +43,24 @@ h1{
     font-family: "Wagon Bold";
     margin:0;
     /* background-color: #161b27; */
-    color:#ffb47e;
+    color:#274e12;
     font-size: 6em;
+  }
+
+#h1-1{
+  margin-top:3vh;
 }
 
-#sous-titre{
-    font-family: "Caladea Regular";
-    color:#d8b1ed;
-    background-color:#161b27;
-    font-size: 3em;
+.sous-titre{
+    font-family: "Wagon Bold";
+    color: #161b27;
+    background-color: #d8b1ed;
+    font-size: 2.5em;
     font-weight: lighter;
+}
+
+#stt1{
+  margin-top:2.5vh;
 }
 
 h2{
@@ -196,29 +204,92 @@ body {
 }
 
 .page-titre{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    text-align:justify;
-    align-items: center; /* Aligne verticalement les éléments */
-    justify-content: center;
+    /* display: flex;
+    flex-direction: column; */
+    /* position: absolute; */
+    /* text-align:justify;
+    align-items: center;
+    justify-content: center; */
     height: 100vh;
     width: 100vw;
     background-color: #e9e4d8;
     z-index: 50;
+    margin:0;
+    padding:0;
 }
 
+.grid-container{
+  display:grid;
+  height:100vh;
+  width:100vw;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 80% 20%;
+  /* justify-content: center;
+  align-items: center; */
+  margin:0;
+  padding:0;
+  /* grid-template: 
+            "bloc1 bloc2"
+            "bloc3" */
+}
+
+.bloc1{
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  z-index:2;
+  margin:0;
+  padding: 15vh 0 0 10vw;
+  display: block;
+}
+
+.bloc2{
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
+  z-index:1;
+  margin:0;
+  /* background-color: #004b81; */
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0), 85%, #e9e4d8), url("asset/images/assortiment_textures.png");
+  background-size: cover;
+  /* background: linear-gradient(blue, pink); */
+}
+
+.bloc3{
+  grid-column: 1 / 4;
+  grid-row: 2 / 3;
+  margin:0;
+}
+
+/* .img-fond-titre{
+  object-fit: cover;
+} */
+
 #cliquer{
-  position:absolute;
-  bottom:10%;
+  /* position:absolute;
+  bottom:10%; */
   font-family:"Caladea Regular";
   font-size:1.2em;
   color:#161b27;
-  margin:0;
+  justify-self: center;
+  /* margin:0; */
   animation-duration: 2s;
    animation-name: clignoter;
    animation-iteration-count: infinite;
    transition: none;
+}
+
+.titre-nom{
+  margin:0;
+  /* margin-top:5vh; */
+  color:#ffb47e;
+  font-family: "Caladea";
+  font-size: 2.5em;
+}
+
+.titre-mention{
+  margin:0;
+  margin-top:5vh;
+  font-family: "Caladea";
+  font-size: 1.5em;
 }
 
 @keyframes clignoter {
@@ -408,7 +479,7 @@ body {
   top: 0;
   background-color: #f5f5f5 /*#e9e4d8*/;
   box-shadow: 0px 2px 8px #e9e4d8;
-  padding: 3% 10%;
+  padding: 4% 5%;
   width: 100%;
   box-sizing: border-box;
   display: flex;
@@ -439,6 +510,10 @@ margin:0;
     /* font-weight: lighter; */
     color: #274e12 /*#faadde*/;
     font-size: 1.2em;
+}
+
+#titre-sommaire:hover{
+  cursor:pointer;
 }
 
 #titre-actif-menu {
@@ -481,6 +556,10 @@ margin:0;
 .box-menu:hover .dropdown-menu {
   display: block;
    /*top: 90%; Si besoin, ajuster légèrement */
+}
+
+.zone-menu:hover .dropdown-menu {
+  display: block;
 }
 
 .liste-sommaire{
@@ -550,13 +629,33 @@ margin:0;
   font-size: 1em;
 }
 
+#lien-T:hover {
+  color:#d8b1ed;
+}
+
+#T.highlight-appear-T {
+  transition: background-color 0.5s ease-in, color 0.5s ease-in, box-shadow 0.5s ease-in;
+  background-color: #e9e4d8;
+  color: #d8b1ed;
+  box-shadow: 0px 10px 20px #d8b1ed;
+}
+
+#T.highlight-disappear-T {
+  transition: background-color 1s ease-out, color 1s ease-out, box-shadow 1s ease-out;
+  background-color: transparent;
+  color: inherit;
+  box-shadow: inherit;
+}
+
 .bloc-jauge-fontsize:hover #T{
   display:none;
+  cursor: pointer;
 }
 
 .bloc-jauge-fontsize:hover .jauge-fontsize {
   /* display: block; */
   display: inline-flex;
+  cursor: pointer;
 }
 
 label {
@@ -566,7 +665,7 @@ label {
 }
 
 label:hover{
-  color:#faadde;
+  cursor: pointer;
 }
 
 input {
@@ -627,7 +726,16 @@ input {
 #jauge::-webkit-slider-thumb:hover {
   transform: scale(1.5);
   background: #faadde;
+  cursor:grab;
 }
+
+/* input[type="range"] {
+  cursor: grab;
+}
+
+input[type="range"]:focus {
+  cursor: grabbing;
+} */
 
 /* Personnalisation du curseur sur Firefox */
 #jauge::-moz-range-thumb {
@@ -687,9 +795,24 @@ input {
 
 .zone-texte{
     padding: 7% 10% 5% 10%;
+    margin:0;
     /* scroll-margin-top: 0.2rem; */
     /* scroll-snap-type: none; */
 
+}
+
+.img-transitions{
+  /* width:calc(100% + 20%);; */
+ /*margin:0 10% 10vh 10%; ⬆⮕⬇⬅*/
+  margin:15% 0 10% 0;
+  height:30vh;
+  object-fit: cover;
+  /* justify-self: center; */
+  display: block;
+  width: calc(100% + 25%); /* 100% + le padding de chaque côté */
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%); /* Centre l'image */
 }
 
 #resume{
@@ -786,7 +909,7 @@ input {
     justify-content: center; /* Centre horizontalement les éléments */
     gap: 1vw; /* Ajoute de l'espace entre les éléments */
     background-color: #e9e4d8;
-    padding: 10%;
+    padding: 8% 10% 10% 10%;
   }
   
   #titre-oeuvres{
@@ -940,6 +1063,11 @@ button:active{
 
   #titre-bibliographie{
     color:#274e12;
+  }
+
+  .sous-titres-biblio{
+    margin:0;
+    color: #274e12;
   }
 
   /* .bibliographie{
