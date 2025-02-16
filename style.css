@@ -170,6 +170,10 @@ a{
     text-decoration: none;
   }
 
+  .titre-article{
+    color: #f5f5f5;
+  }
+
   .appel-notes{
     text-decoration: none;
     color:#e9e4d8;
@@ -833,6 +837,10 @@ input[type="range"]:focus {
   /* margin: auto; */
   width:31.77%;
 }
+
+/* .titre-ouvrage.bibliographie:hover {
+  cursor:text;
+} */
 
 /* Animations des styles pour la mise en évidence d'éléments ciblés */
 
