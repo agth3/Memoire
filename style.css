@@ -39,6 +39,10 @@
 
 /*--------- TITRAGES ---------*/
 
+body{
+  cursor:default;
+}
+
 h1{
     font-family: "Wagon Bold";
     margin:0;
@@ -116,6 +120,11 @@ a{
     overflow-wrap: break-word; /*coupe les liens trop longs */
     word-break: break-word; /*pareil mais plus radical, à utiliser qu'en exception*/
   }
+
+  a:not([href]) { /* a sans liens href renseignés*/
+    /* cursor: text; */
+    pointer-events: none;
+}
   
   .lien{
     color: #faadde;
@@ -138,9 +147,9 @@ a{
     cursor:pointer;
   }
 
-  .column3 a.titre-oeuvre {
+  /* .column3 a.titre-oeuvre {
     cursor:text;
-  }
+  } */
 
   .artiste{
     color: #ffb47e;
