@@ -814,11 +814,58 @@ input[type="range"]:focus {
 
 }
 
+#intro-auteur,
+#intro-artiste,
+#intro-oeuvre,
+#intro-notes,
+#intro-liens,
+#intro-credits{
+  color: #161b27;
+}
+
+#intro-liens:hover{
+  color: #faadde;
+  background-color: #161b27;
+}
+
+#intro-oeuvre:hover{
+  font-family: "Caladea Italic";
+  color: #274e12;
+  background-color: #e9e4d8;
+  text-decoration: none;
+}
+
+#intro-artiste:hover{
+  color: #ffb47e;
+  background-color: #161b27;
+  text-decoration: none;
+}
+
+#intro-auteur:hover{
+  color: #e9e4d8;
+  background-color: #274e12;
+  text-decoration: none;
+}
+
+#intro-notes:hover{
+  text-decoration: none;
+  color:#e9e4d8;
+  background-color: #004b81;
+}
+
+#intro-credits:hover{
+  color:#d8b1ed;
+  background-color: #343332;
+  text-decoration: none;
+}
+
+
+
 .img-transitions{
   /* width:calc(100% + 20%);; */
  /*margin:0 10% 10vh 10%; ⬆⮕⬇⬅*/
   margin:15% 0 10% 0;
-  height:30vh;
+  height:30vh; /*30vh*/
   object-fit: cover;
   /* justify-self: center; */
   display: block;
