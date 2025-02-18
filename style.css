@@ -185,12 +185,12 @@ a{
 
   .appel-notes{
     text-decoration: none;
-    color:#e9e4d8;
-    background-color: #004b81;
+    color:#d8b1ed;
+    background-color: #f5f5f5;
   }
 
   .appel-notes:hover{
-    color: #f5f5f5;
+    color: #faadde;
   }
 
   .fig{
@@ -809,6 +809,7 @@ input[type="range"]:focus {
 .zone-texte{
     padding: 7% 10% 5% 10%;
     margin:0;
+    margin-top: -5vh;
     /* scroll-margin-top: 0.2rem; */
     /* scroll-snap-type: none; */
 
@@ -849,8 +850,10 @@ input[type="range"]:focus {
 
 #intro-notes:hover{
   text-decoration: none;
-  color:#e9e4d8;
-  background-color: #004b81;
+  /* color:#e9e4d8;
+  background-color: #004b81; */
+  color:#d8b1ed;
+    background-color: #f5f5f5;
 }
 
 #intro-credits:hover{
@@ -865,7 +868,7 @@ input[type="range"]:focus {
   /* width:calc(100% + 20%);; */
  /*margin:0 10% 10vh 10%; ⬆⮕⬇⬅*/
   margin:15% 0 10% 0;
-  height:30vh; /*30vh*/
+  height:40vh; /*30vh*/
   object-fit: cover;
   /* justify-self: center; */
   display: block;
@@ -881,6 +884,15 @@ input[type="range"]:focus {
 
 #introduction{
   margin:0;
+}
+
+#renvoi-note-69{
+  scroll-margin-top:20vh;
+}
+
+#citation-scherer{
+  padding: 0 2vw;
+  font-size: 0.95em;
 }
    
 
@@ -1104,6 +1116,11 @@ button:active{
   
   #titre-notes{
     color: #faadde;
+  }
+
+  #schema-note-4{
+    width:100%;
+    margin-bottom: 0.75vh;
   }
 
   /* .notes{
