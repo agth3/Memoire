@@ -125,7 +125,11 @@ a{
     /* cursor: text; */
     pointer-events: none;
 }
-  
+
+I{
+  font-family: "Caladea Italic";
+}
+
   .lien{
     color: #faadde;
     background-color: #161b27;
@@ -173,13 +177,19 @@ a{
     color: #f5f5f5;
   }
 
-  .titre-ouvrage{
+  .bibliographie .titre-ouvrage { /*style spécifique à la section bibliographie*/
     font-family: "Caladea Italic";
     color: #f5f5f5;
     text-decoration: none;
   }
 
-  .titre-article{
+  .notes .titre-ouvrage { /*style spécifique à la section notes*/
+    font-family: "Caladea Italic";
+    color: #d8b1ed;
+    text-decoration: none;
+  }
+
+  .titre-article{ /*apparaît seulement en bibliographie*/
     color: #f5f5f5;
   }
 
@@ -305,6 +315,26 @@ body {
   font-family: "Caladea";
   font-size: 1.5em;
 }
+
+.tutorat{
+  margin:0;
+  margin-top:2vh;
+  font-family: "Caladea";
+  font-size: 1.2em;
+}
+
+p.titre-lien{
+  margin:0;
+  margin-top:2vh;
+  font-family: "Caladea";
+  font-size: 1.2em;
+}
+
+a.titre-lien{
+  color:#faadde;
+  background-color: #161b27;
+}
+
 
 @keyframes clignoter {
   0%   { opacity:1; }
