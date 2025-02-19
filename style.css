@@ -185,7 +185,8 @@ a{
 
   .appel-notes{
     text-decoration: none;
-    color:#d8b1ed;
+    color:#161b27;
+    text-decoration: underline #d8b1ed;
     background-color: #f5f5f5;
   }
 
