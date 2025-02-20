@@ -55,12 +55,16 @@ h1{
   margin-top:3vh;
 }
 
-.sous-titre{
+h1.sous-titre{
     font-family: "Wagon Bold";
-    color: #161b27;
-    background-color: #d8b1ed;
     font-size: 2.5em;
     font-weight: lighter;
+}
+
+a.sous-titre{
+  color: #161b27;
+  background-color: #d8b1ed;
+  /* cursor: default; */
 }
 
 #stt1{
@@ -313,12 +317,12 @@ body {
   margin:0;
   margin-top:5vh;
   font-family: "Caladea";
-  font-size: 1.5em;
+  font-size: 1.8em;
 }
 
 .tutorat{
   margin:0;
-  margin-top:2vh;
+  margin-top:5vh;
   font-family: "Caladea";
   font-size: 1.2em;
 }
@@ -503,6 +507,24 @@ a.titre-lien{
   fill:#faadde;
 }
 
+.ancre-icono{
+  /* border: solid 1px #ffb47e; */
+   scroll-margin-top:15vh; 
+}
+
+.ancre-icono.highlight-appear {
+  transition: background-color 0.5s ease-in, color 0.5s ease-in, box-shadow 0.5s ease-in;
+  background-color: #e9e4d8;
+  color: #274e12;
+  box-shadow: 1px 1px 3px 5px #e9e4d8;
+}
+
+.ancre-icono.highlight-disappear {
+  transition: background-color 1s ease-out, color 1s ease-out, box-shadow 1s ease-out;
+  background-color: transparent;
+  color: inherit;
+  box-shadow: inherit;
+}
 
 
 /*--------- COLONNE CENTRALE ---------*/
