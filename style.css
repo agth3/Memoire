@@ -197,15 +197,21 @@ I{
     color: #f5f5f5;
   }
 
-  .appel-notes{
-    text-decoration: none;
+  .column2 .appel-notes {
     color:#161b27;
     text-decoration: underline #d8b1ed;
-    background-color: #f5f5f5;
+    /* background-color: #f5f5f5; */
+  }
+
+  .column3 .appel-notes {
+    color:#f5f5f5;
+    text-decoration: underline #d8b1ed;
   }
 
   .appel-notes:hover{
-    color: #faadde;
+    color: #f5f5f5;
+    background-color: #d8b1ed;
+    text-decoration: underline #f5f5f5;
   }
 
   .fig{
@@ -491,21 +497,39 @@ a.titre-lien{
 } */
 
 .glow-hover {
-    transition: filter 0.3s ease;
+  transition: filter 0.3s ease;
 }
 
+/* Effet au survol */
 .glow-hover:hover {
-    filter: url(#glow-effect);
+  filter: url(#glow-effect);
 }
 
+/* Effet d'activation par le scroll */
 .glow-circle {
   transition: filter 0.3s ease-in-out;
+  pointer-events: all;
 }
 
-.active {
+/* Priorité au scroll */
+.glow-circle.observed {
   filter: url(#glow-effect);
-  fill:#faadde;
+  stroke: #faadde;
 }
+
+/* Effet au clic (priorité la plus haute) */
+.glow-circle.active {
+  filter: url(#glow-effect);
+  fill: #faadde ; /* !importantAssure que l'effet reste actif après le clic */
+}
+
+/* S'assurer que le hover fonctionne même si observed est actif */
+.glow-circle.observed:hover,
+.glow-circle.active:hover {
+  filter: url(#glow-effect);
+  stroke: #ffffff ; /*!important*/
+}
+
 
 .ancre-icono{
   /* border: solid 1px #ffb47e; */
@@ -902,12 +926,16 @@ input[type="range"]:focus {
 }
 
 #intro-notes:hover{
-  text-decoration: none;
-  /* color:#e9e4d8;
-  background-color: #004b81; */
-  color:#d8b1ed;
-    background-color: #f5f5f5;
+  color:#161b27;
+  text-decoration: underline #d8b1ed;
 }
+
+.appel-notes:hover{
+  color: #f5f5f5;
+  background-color: #d8b1ed;
+  text-decoration: underline #f5f5f5;
+}
+
 
 #intro-credits:hover{
   color:#d8b1ed;
