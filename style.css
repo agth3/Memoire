@@ -108,8 +108,21 @@ p{
     color: #161b27;
     font-size: 1.1em;
     text-align:justify;
+    text-align-last: left;
     margin: 5% 0;
     margin-bottom: 10%;
+    line-height: 1.3;   /*interlignage : valeur en unités relatives (ex: 1.5 ou 1.6)*/
+    /*letter-spacing: 0.1em;  interlettrage */
+    word-spacing: 0.1em;   /*Augmente l'espacement entre les mots*/
+    hyphens: auto;   /*Active la césure automatique*/
+    hyphenate-character: auto; /*précise quel tiret pour la césure : '~'*/
+    hyphenate-limit-chars: 10 4 4;
+    /*-ms-hyphens: auto;       Pour les anciens navigateurs IE
+    -moz-hyphens: auto;      Pour Firefox
+    -webkit-hyphens: auto;   Pour WebKit (Chrome, Safari) */
+    /*widows: 2;
+    orphans: 2; garantit qu’il y a au moins deux lignes de texte dans un paragraphe qui finit sur une ligne*/
+    text-justify: inter-word;
 }
 
 .remerciements p{
