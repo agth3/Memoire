@@ -426,7 +426,7 @@ a.titre-lien{
 }
 
 .column2::-webkit-scrollbar {
-    width: 8px;
+    width: 12px;
     height: 8px;
 }
 
@@ -445,7 +445,7 @@ a.titre-lien{
 }
 
 .column3::-webkit-scrollbar {
-  width: 9px;
+  width: 11px;
   height: 8px;
 }
 
@@ -471,7 +471,7 @@ a.titre-lien{
     flex-direction: column;
     align-items: center; /* Centre horizontalement le contenu */
     justify-content: flex-start; /* Aligne le contenu en haut */
-    width:31.77%;
+    width:31%; /*31.77%*/
     height: 100vh;
     position: relative; /* Nécessaire pour positionner le contenu avec `absolute` */
 }
@@ -571,7 +571,7 @@ a.titre-lien{
     
 .column2 {
   background-color: #f5f5f5;
-  width: 36.46%; /* Largeur définie dynamiquement */
+  width: 37%; /*36.4% Largeur définie dynamiquement */
   position: relative; /* Nécessaire pour que .zone-menu se réfère à elle */
   /*display: flex;
   flex-direction: column;  S'assure que les enfants s'empilent verticalement */
@@ -639,23 +639,29 @@ margin:0;
   box-sizing: border-box;
   position: absolute; /* Permet au titre de ne pas influencer la taille du conteneur */
   padding: 0 1%;
+  border-bottom: solid 3px #f5f5f5;
 }
 
 /* Menus déroulants */
+
+
 .dropdown-menu {
   display: none;
   position: absolute;
-  width: 100%;
+  /* width: 132%; */
   box-sizing: border-box;
   top: 100%; /* Peut être ajusté pour mieux aligner le dropdown */
-  left: 0;
+  /* left: 0; */
+  right: 0;
   margin-top: 0.6em;
-  background-color: #f5f5f5/*#e9e4d8*/;
+  /* background-color: #e9e4d8; */
+  background-image: url("asset/images/assortiment_textures9.png");
+  background-attachment: local;  /* Permet au fond de défiler avec le contenu */
   padding: 5px 10px;
   z-index: 10; /* Augmenter z-index pour garantir que le menu est au-dessus d'autres éléments */
   overflow-y: scroll;
   max-height: 92vh;
-  box-shadow: 0px 5px 8px #e9e4d8;
+  box-shadow: 0px 5px 8px #e9e4d8 /*#004b81*/;
 }
 
 /* Affichage des menus au survol */
@@ -677,35 +683,63 @@ margin:0;
 .liste-sommaire a {
   display: block;
   text-decoration: none;
-  font-family: "Caladea Regular";
-  color:#343332 /*#004b81*/;
   font-size: 1em;
   margin: 3% 3%;
 }
 
+.a-h2{
+  font-family: "Wagon Bold";
+  color: #343332;
+  /* color: #004b81; */
+}
+
 .a-h2:hover{
-  /* font-family: "Wagon Bold"; */
-  color: #d8b1ed;
+  font-family: "Wagon Bold";
+  /* color: #d8b1ed; */
+  /* color: #343332; */
+  color:#ffb47e;
   /* font-size: 1.5em; */
 } 
+
+.a-h3{
+  /* padding-left: 5%; */
+  font-family: "Caladea Regular";
+  /* color: #343332; */
+  color: #004b81;
+}
 
 .a-h3:hover{
   /* font-family: "Wagon ExtraLight";
   font-weight: lighter; */
-  color: #274e12;
+  /* color: #274e12; */
+  color:#ffb47e;
   /* font-size: 1.5em; */
 
 } 
 
+.a-h4{
+  /* padding-left: 5%; */
+  font-family: "Caladea Regular";
+  /* color: #343332; */
+  color: #004b81;
+}
+
 .a-h4:hover{
   /* font-family: "Wagon ExtraLightItalic";
   font-weight: lighter; */
-  color: #004b81;
+  /* color: #004b81; */
+  color:#ffb47e;
   /* font-size: 1.5em; */
 }
 
+.a-droite{
+  text-align: right;
+  color: #004b81;
+}
+
 .divider{
-  border-top: 1px solid #161b27;
+  border-top: 2px solid #f5f5f5;
+  /* border-top: 1.5px solid #e9e4d8; */
 }
 
 
@@ -997,10 +1031,10 @@ input[type="range"]:focus {
 /*--------- COLONNE DROITE ---------*/
     
 
-.column3{
+.column3 {
   /* height: 100vh; */
   /* margin: auto; */
-  width:31.77%;
+  width:32%; /*31.77%*/
 }
 
 /* .titre-ouvrage.bibliographie:hover {
@@ -1400,6 +1434,9 @@ button:active{
       font-family: "Caladea Regular", serif;
       font-size: 1.1em;
       color: #161b27;
+      hyphens:none;
+      text-align: center;
+      text-align-last:center;
       /* text-align:left; */
       padding: 0;
       margin: 0 3em;
@@ -1407,16 +1444,14 @@ button:active{
 
     #footer-avertissement{
       position:absolute;
-      bottom:5%;
       font-family: "Caladea Regular";
       color: #161b27;
       bottom: 8vw;
       font-size: 1em;
       align-self: center;
-      /* text-align:center; */
+      align-content: center;
       margin: 0 3em;
       text-align: center;
-
     }
 
   }
