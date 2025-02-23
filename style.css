@@ -476,26 +476,26 @@ a.titre-lien{
     position: relative; /* Nécessaire pour positionner le contenu avec `absolute` */
 }
 
-#Calque_1 {
+#schema-icono { /*anciennement #Calque_1*/
     position: absolute; /* positionnement indépendamment */
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(180deg);
+    transform: translate(-50%, -50%) perspective(500px) rotateX(-3deg) /*élargit très légèrement le haut*/ translateY(2%) /*rééquilibre le décalage crée par la perspective pour centrer verticalement*/;
     height: 95vh;
     width: auto;
     max-width: 100%; /* Empêche de dépasser la largeur de la colonne */
     max-height: calc(100% - 5% - 2em); /* Assure qu'il reste dans la colonne */
 }
 
-.cls-1 {
-    fill: #d0d0d0;
+.cercles {
+    fill: #e9e4d8;
     stroke: #fff;
     stroke-miterlimit: 10;
     stroke-width: 2.66px;
     /* box-shadow: 8px 8px 5px 10px #faadde; */
 }
 
-.cls-1:hover {
+.cercles:hover {
     fill:#faadde;
     stroke:#f5f5f5;
     stroke-miterlimit: 10;
@@ -504,7 +504,7 @@ a.titre-lien{
     box-shadow: 8px 8px 5px 10px #faadde;
 }
 
-/* .cls-1:active {
+/* .cercles:active {
     fill:#faadde;
     stroke:#f5f5f5;
 } */
@@ -528,11 +528,13 @@ a.titre-lien{
 .glow-circle.observed {
   filter: url(#glow-effect);
   stroke: #faadde;
+  fill:#f5f5f5;
 }
 
 /* Effet au clic (priorité la plus haute) */
 .glow-circle.active {
   filter: url(#glow-effect);
+  stroke:#faadde;
   fill: #faadde ; /* !importantAssure que l'effet reste actif après le clic */
 }
 
@@ -540,7 +542,8 @@ a.titre-lien{
 .glow-circle.observed:hover,
 .glow-circle.active:hover {
   filter: url(#glow-effect);
-  stroke: #ffffff ; /*!important*/
+  stroke: #f5f5f5 ; /*!important*/
+  fill:#faadde;
 }
 
 
@@ -1061,7 +1064,7 @@ input[type="range"]:focus {
 
 .highlight-disappear.descriptions-oeuvres {
   background-color: transparent;
-  color: inherit;
+  color: #004b81;
 }
 
 .highlight-disappear.descriptions-credits {
