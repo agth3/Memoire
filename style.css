@@ -1379,7 +1379,9 @@ button:active{
   display: none;
 }
 
-  @media screen and (max-width: 1024px) {
+
+@media screen and (max-width: 1024px) , screen and (max-aspect-ratio: 4/3) and (max-width: 1024px) {
+  /* Styles pour les petits écrans (smartphones portrait ou paysage, tablettes portrait), ou les petits écrans au ratio inferieur à 4:3 (tablettes si plus petites ou fenêtre d'ordi trop raccourcies) */
     
     * {
       box-sizing: border-box; /* Empêche les marges ou bordures d'élargir un élément */
@@ -1400,10 +1402,8 @@ button:active{
 
     /* Bloc couvrant tout l'écran */
     #avertissement {
-      display: flex; /* Pour centrer le contenu */
-      flex-direction: column;
-      justify-content: center;
-      /* align-items: center; */
+      /* display: flex;
+      flex-direction: column; */
       position: fixed;
       top: 0;
       left: 0;
@@ -1412,12 +1412,46 @@ button:active{
       background-color: #e9e4d8;
       z-index: 50;
       overflow: hidden;
-      padding: 0;
-      /*max-width: 100vw;  Empêche tout dépassement horizontal */
+    
+      display:grid;
+      height:100vh;
+      width:100vw;
+      grid-template-columns: 1fr;
+      grid-template-rows: 42% 58%;
+       justify-content: center;
+      /*align-items: center; */
+      margin:0;
+      padding:0;
+      /* grid-template: 
+                "bloc1 bloc2"
+                "bloc3" */
+    }
+    
+    .bloc1-avertissement{
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      margin:0;
+      background-image: linear-gradient(to bottom, rgba(255,255,255,0), 90%, #e9e4d8), url("asset/images/assortiment_textures5.png");
+      background-size: cover;
+      /* display: block; */
+    }
+    
+    .bloc2-avertissement{
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      margin:0;
+      /* padding-top:2vh; */
+      padding:2vh 12vw 0 12vw;
+      /* display: flex;
+      flex-direction: column; */
+      /* align-content: center; */
+      /* background-color: #e9e4d8; */
+      /* background: linear-gradient(blue, pink); */
     }
 
+
     .bloc-titre-avertissement{
-      top:4vh;
+      top:5vh;
       position:absolute;
       left: 8vw;
       margin:0;
@@ -1429,7 +1463,7 @@ button:active{
       /* left:1.5em; */
       font-family: "Wagon Bold";
       font-size: 1.5em;
-      color: #d8b1ed;
+      color: #004b81;
       /* background-color: #161b27; */
       /* margin: 0 3em; */
       margin: 0;
@@ -1449,8 +1483,8 @@ button:active{
       /* top:10vh; */
       font-family: "Caladea Regular";
       font-size: 1em;
-      color: #e9e4d8;
-      background-color: #274e12;
+      color: #d8b1ed;
+      background-color: #161b27;
       margin:0;
       margin-top: 0.5vh;
       display: inline-block; /* Adapte la largeur à celle du texte */
@@ -1468,31 +1502,36 @@ button:active{
     }
 
     .texte-avertissement {
-      /* display:flex;
-      flex-direction: column; */
-       text-align: center;
-      /*align-items: center; */
+      display: flex;              /* Utilise Flexbox pour centrer le bloc */
+  justify-content: center;    /* Centre le bloc de texte horizontalement */
+  align-items: center;        /* Centre le bloc de texte verticalement */
+  text-align: left;           /* Aligne le texte à gauche à l'intérieur du bloc */
+  width: fit-content;         /* Ajuste la largeur du <p> à son contenu */
+  margin: 0 auto;             /* Centre le bloc de texte dans la grid */
+      
       font-family: "Caladea Regular", serif;
       font-size: 1.1em;
       color: #161b27;
       hyphens:none;
-      text-align: center;
-      text-align-last:center;
-      /* text-align:left; */
       padding: 0;
-      margin: 0 3em;
+      /* margin: 0 3em; */
+      /* margin: 0 8vw; */
     }
 
     #footer-avertissement{
       position:absolute;
       font-family: "Caladea Regular";
       color: #161b27;
-      bottom: 8vw;
+      bottom: 5vh;
+      left:8vw;
+      /* left: 50%; */
+      /* transform: translate(-50%, -50%); */
       font-size: 1em;
-      align-self: center;
-      align-content: center;
-      margin: 0 3em;
-      text-align: center;
+      line-height: 1.3;
+      /* align-self: center;
+      align-content: center; */
+      /* margin: 0 3em; */
+      text-align: left;
     }
 
   }
