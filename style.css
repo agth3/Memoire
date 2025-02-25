@@ -1,39 +1,55 @@
 /*--------- TYPOS ---------*/
 
 @font-face {
-    font-family: "Caladea Regular";
-    src: url("asset/font/Caladea/Caladea-Regular.ttf");
-  }
+  font-family: "Caladea";
+  src: url("asset/font/Caladea/Caladea-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Caladea";
+  src: url("asset/font/Caladea/Caladea-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Caladea";
+  src: url("asset/font/Caladea/Caladea-Italic.ttf");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Caladea";
+  src: url("asset/font/Caladea/Caladea-BoldItalic.ttf");
+  font-weight: 700;
+  font-style: italic;
+}
+
   
-  @font-face {
-    font-family: "Caladea Bold";
-    src: url("asset/font/Caladea/Caladea-Bold.ttf");
-  }
+@font-face {
+  font-family: "Wagon";
+  src: url("asset/font/Wagon/Wagon-Bold.otf");
+  font-weight: 700;
+  font-style: normal;
+}
 
-  @font-face {
-    font-family: "Caladea Bold Italic";
-    src: url("asset/font/Caladea/Caladea-BoldItalic.ttf");
-  }
+@font-face {
+  font-family: "Wagon";
+  src: url("asset/font/Wagon/Wagon-ExtraLight.otf");
+  font-weight: 200;
+  font-style: normal;
+}
 
-  @font-face {
-    font-family: "Caladea Italic";
-    src: url("asset/font/Caladea/Caladea-Italic.ttf");
-  }
-  
-  @font-face {
-    font-family: "Wagon Bold";
-    src: url("asset/font/Wagon/Wagon-Bold.otf");
-  }
+@font-face {
+  font-family: "Wagon";
+  src: url("asset/font/Wagon/Wagon-ExtraLightItalic.otf");
+  font-weight: 200;
+  font-style: italic;
+}
 
-  @font-face {
-    font-family: "Wagon ExtraLight";
-    src: url("asset/font/Wagon/Wagon-ExtraLight.otf");
-  }
-
-  @font-face {
-    font-family: "Wagon ExtraLightItalic";
-    src: url("asset/font/Wagon/Wagon-ExtraLightItalic.otf");
-  }
 
 
 
@@ -44,11 +60,12 @@ body{
 }
 
 h1{
-    font-family: "Wagon Bold";
+    font-family: "Wagon", sans-serif;
+    font-weight: 700;
     margin:0;
     /* background-color: #161b27; */
     color: #274e12; /*#004b81*/
-    font-size: 5em;
+    font-size: 4.69vw; /*5em*/
     margin-left:5vw;
   }
 
@@ -57,9 +74,10 @@ h1{
 }
 
 h1.sous-titre{
-    font-family: "Wagon Bold";
-    font-size: 2.5em;
-    font-weight: lighter;
+  font-family: "Wagon", sans-serif;
+  font-weight: 700;
+    font-size: 2.34vw; /*2.5em*/
+    /* font-weight: lighter; */
     margin-left:5vw;
 }
 
@@ -74,48 +92,54 @@ a.sous-titre{
 }
 
 h2{
-    font-family: "Wagon Bold";
+  font-family: "Wagon", sans-serif;
+  font-weight: 700;
     color: #d8b1ed;
-    font-size: 2em;
+    font-size: 1.87vw; /*2em*/
     margin: 5% 0;
-    scroll-margin-top: 2.6em;
+    scroll-margin-top: 4.63vh; /*2.6em*/
 }
 
 h3{
-    font-family: "Wagon ExtraLight";
-    font-weight: lighter;
+  font-family: "Wagon", sans-serif;
+  font-weight: 200;
+    /* font-weight: lighter; */
     color: #274e12;
-    font-size: 1.85em;
+    font-size: 1.73vw; /*1.85em*/
     margin: 5% 0;
-    scroll-margin-top: 2.7em;
+    scroll-margin-top: 4.81vh; /*2.7em*/
 }
 
 h4{
-    font-family: "Wagon ExtraLightItalic";
-    font-weight: lighter;
+  font-family: "Wagon", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+    /* font-weight: lighter; */
     color: #004b81;
-    font-size: 1.7em;
+    font-size: 1.59vw; /*1.7em*/
     margin: 5% 0;
-    scroll-margin-top: 2.7em;
+    scroll-margin-top: 4.81vh; /*2.7em*/  
 }
 
 h5{
-    font-family: "Caladea Bold";
+  font-family: "Caladea", serif;
+  font-weight: 700;
     color:#161b27;
-    font-size: 1.2em;
+    font-size: 1.12vw; /*1.2em*/
 }
 
 p{
-    font-family: "Caladea Regular";
+  font-family: "Caladea", serif;
+  font-weight: 400;
     color: #161b27;
-    font-size: 1.1em;
+    font-size: 1.03vw; /*1.1em*/
     text-align:justify;
     text-align-last: left;
     margin: 5% 0;
     margin-bottom: 10%;
     line-height: 1.3;   /*interlignage : valeur en unités relatives (ex: 1.5 ou 1.6)*/
     /*letter-spacing: 0.1em;  interlettrage */
-    word-spacing: 0.05em;   /*Augmente l'espacement entre les mots*/
+    word-spacing: 0.05vw;   /*Augmente l'espacement entre les mots*/
     hyphens: auto;   /*Active la césure automatique*/
     hyphenate-character: auto; /*précise quel tiret pour la césure : '~'*/
     hyphenate-limit-chars: 10 4 4;
@@ -146,7 +170,9 @@ a{
 }
 
 I{
-  font-family: "Caladea Italic";
+  font-family: "Caladea", serif;
+  font-weight: 400;
+  font-style: italic;
 }
 
   .lien{
@@ -159,7 +185,9 @@ I{
   }
   
   .titre-oeuvre{
-    font-family: "Caladea Italic";
+    font-family: "Caladea", serif;
+    font-weight: 400;
+    font-style: italic;
     color: #274e12;
     background-color: #e9e4d8;
     text-decoration: none;
@@ -197,13 +225,17 @@ I{
   }
 
   .bibliographie .titre-ouvrage { /*style spécifique à la section bibliographie*/
-    font-family: "Caladea Italic";
+    font-family: "Caladea", serif;
+    font-weight: 400;
+    font-style: italic;
     color: #f5f5f5;
     text-decoration: none;
   }
 
   .notes .titre-ouvrage { /*style spécifique à la section notes*/
-    font-family: "Caladea Italic";
+    font-family: "Caladea", serif;
+    font-weight: 400;
+    font-style: italic;
     color: #d8b1ed;
     text-decoration: none;
   }
@@ -214,19 +246,24 @@ I{
 
   .column2 .appel-notes {
     color:#161b27;
-    text-decoration: underline #d8b1ed;
-    /* background-color: #f5f5f5; */
+    text-decoration: underline;
+    text-decoration-color: #d8b1ed;
+    text-decoration-style: solid;
   }
 
   .column3 .appel-notes {
     color:#f5f5f5;
-    text-decoration: underline #d8b1ed;
+    text-decoration: underline;
+    text-decoration-color: #d8b1ed;
+    text-decoration-style: solid;
   }
 
   .appel-notes:hover{
     color: #f5f5f5;
     background-color: #d8b1ed;
-    text-decoration: underline #f5f5f5;
+    text-decoration: underline;
+    text-decoration-color: #f5f5f5;
+    text-decoration-style: solid;
   }
 
   .fig{
@@ -366,8 +403,9 @@ body {
 #cliquer{
   /* position:absolute;
   bottom:10%; */
-  font-family:"Caladea Regular";
-  font-size:1.2em;
+  font-family: "Caladea", serif;
+  font-weight: 400;
+  font-size: 1.12vw; /*1.2em*/
   color:#e9e4d8;
   background-color: #161b27;
   /* justify-self: center; */
@@ -388,15 +426,17 @@ width: max-content;
   margin:0;
   /* margin-top:5vh; */
   color:#ffb47e;
-  font-family: "Caladea";
-  font-size: 2em;
+  font-family: "Caladea", serif;
+  font-weight: 400;
+  font-size: 1.87vw; /*2em*/
 }
 
 .titre-mention{
   margin:0;
   /* margin-top:2vh; */
-  font-family: "Caladea";
-  font-size: 1.2em;
+  font-family: "Caladea", serif;
+  font-weight: 400;
+  font-size: 1.12vw; /*1.2em*/
   text-align: left;
   display: block;
 }
@@ -404,8 +444,9 @@ width: max-content;
 .tutorat {
   margin: 0;
   margin-top: 1.5vh;
-  font-family: "Caladea";
-  font-size: 1.1em;
+  font-family: "Caladea", serif;
+  font-weight: 400;
+  font-size: 1.03vw; /*1.1em*/
   text-align: left;
   display: block; /* Transforme les spans en blocs pour que text-align fonctionne */
 }
@@ -413,7 +454,8 @@ width: max-content;
 .titre-lien {
   margin: 0;
   /* margin-top: 1.5vh; */
-  font-family: "Caladea";
+  font-family: "Caladea", serif;
+  font-weight: 400;
   text-align: left;
   display: flex;          /* Utilise flexbox pour contrôler l'alignement */
   justify-content: left; /* Aligne le contenu (le <a>) à droite */
@@ -422,7 +464,7 @@ width: max-content;
 .titre-lien a {
   display: inline-block; /* Garde le lien à la taille du texte */
   text-align: left;     /* Aligne le texte à droite */
-  font-size: 1.1em;
+  font-size: 1.03vw; /*1.1em*/
   margin-top: 1.5vh;
   color:#faadde;
   background-color: #161b27;
@@ -705,10 +747,10 @@ margin:0;
 }
 
 #titre-sommaire{
-  font-family: "Wagon Bold";
-    /* font-weight: lighter; */
+  font-family: "Wagon", sans-serif;
+  font-weight: 700;
     color: #274e12 /*#faadde*/;
-    font-size: 1.2em;
+    font-size: 1.12vw; /*1.2em*/
 }
 
 #titre-sommaire:hover{
@@ -718,10 +760,10 @@ margin:0;
 #titre-actif-menu {
   background-color: #e9e4d8 /*#f5f5f5*/;
   /* box-shadow: inset 0px 5px 10px #faadde, 0px 2px 5px #faadde; */
-  font-family: "Caladea Regular" /*"Wagon ExtraLightItalic"*/;
-  /* font-weight: lighter; */
+  font-family: "Caladea", serif;
+  font-weight: 400;
   color: #343332 /*#274e12*/;
-  font-size: 1em;
+  font-size: 0.94vw; /*1em*/
   white-space: nowrap; /* Texte sur une seule ligne */
   overflow: hidden; /* Cache le texte qui dépasse */
   text-overflow: ellipsis; /* Affiche "..." si le texte dépasse */
@@ -746,7 +788,7 @@ margin:0;
   top: 100%; /* Peut être ajusté pour mieux aligner le dropdown */
   /* left: 0; */
   right: 0;
-  margin-top: 0.6em;
+  margin-top: 1.07vh; /*0.6em*/
   /* background-color: #e9e4d8; */
   background-image: url("asset/images/assortiment_textures9.png");
   background-attachment: local;  /* Permet au fond de défiler avec le contenu */
@@ -776,27 +818,30 @@ margin:0;
 .liste-sommaire a {
   display: block;
   text-decoration: none;
-  font-size: 1em;
+  font-size: 0.94vw; /*1em*/
   margin: 3% 3%;
 }
 
 .a-h2{
-  font-family: "Wagon Bold";
+  font-family: "Wagon", sans-serif;
+  font-weight: 700;
   color: #343332;
   /* color: #004b81; */
 }
 
 .a-h2:hover{
-  font-family: "Wagon Bold";
+  font-family: "Wagon", sans-serif;
+  font-weight: 700;
   /* color: #d8b1ed; */
   /* color: #343332; */
   color:#ffb47e;
-  /* font-size: 1.5em; */
+  /* font-size: 1.41vw; 1.5em*/
 } 
 
 .a-h3{
   /* padding-left: 5%; */
-  font-family: "Caladea Regular";
+  font-family: "Caladea", serif;
+  font-weight: 400;
   /* color: #343332; */
   color: #004b81;
 }
@@ -806,13 +851,14 @@ margin:0;
   font-weight: lighter; */
   /* color: #274e12; */
   color:#ffb47e;
-  /* font-size: 1.5em; */
+  /* font-size: 1.41vw; 1.5em*/
 
 } 
 
 .a-h4{
   /* padding-left: 5%; */
-  font-family: "Caladea Regular";
+  font-family: "Caladea", serif;
+  font-weight: 400;
   /* color: #343332; */
   color: #004b81;
 }
@@ -822,7 +868,7 @@ margin:0;
   font-weight: lighter; */
   /* color: #004b81; */
   color:#ffb47e;
-  /* font-size: 1.5em; */
+  /* font-size: 1.41vw; 1.5em*/
 }
 
 .a-droite{
@@ -857,9 +903,10 @@ margin:0;
 #T {
   box-sizing: border-box;
   padding: 1vw;
-  font-family: 'Caladea';
+  font-family: "Caladea", serif;
+  font-weight: 400;
   color: #274e12;
-  font-size: 1em;
+  font-size: 0.94vw; /*1em*/
 }
 
 #lien-T:hover {
@@ -892,8 +939,9 @@ margin:0;
 }
 
 label {
-  font-size: 0.9em;
-  font-family: 'Caladea';
+  font-size: 0.84vw; /*0.9em*/
+  font-family: "Caladea", serif;
+  font-weight: 400;
   color: #274e12;
 }
 
@@ -902,7 +950,7 @@ label:hover{
 }
 
 input {
-  margin: 0.4rem;
+  margin: 0.4em;
 }
 
 .jauge-fontsize {
@@ -921,7 +969,7 @@ input {
   /* z-index:9;   */
   /* font-family: "Wagon Bold"; */
   /* color: #274e12; */
-  /* font-size: 0.9em; */
+  /* font-size: 0.84vw; 0.9em */
 }
 
 /* Style de la jauge */
@@ -1068,7 +1116,9 @@ input[type="range"]:focus {
 }
 
 #intro-oeuvre:hover{
-  font-family: "Caladea Italic";
+  font-family: "Caladea", serif;
+  font-weight: 400;
+  font-style: italic;
   color: #274e12;
   background-color: #e9e4d8;
   text-decoration: none;
@@ -1088,13 +1138,9 @@ input[type="range"]:focus {
 
 #intro-notes:hover{
   color:#161b27;
-  text-decoration: underline #d8b1ed;
-}
-
-.appel-notes:hover{
-  color: #f5f5f5;
-  background-color: #d8b1ed;
-  text-decoration: underline #f5f5f5;
+  text-decoration: underline;
+    text-decoration-color: #d8b1ed;
+    text-decoration-style: solid;
 }
 
 
@@ -1135,7 +1181,7 @@ input[type="range"]:focus {
 #citation-scherer{
   margin: -5% 0 5% 0;
   padding: 5% 2vw;
-  font-size: 0.95em;
+  font-size: 0.89vw; /*0.95em*/
   border: solid 1px #d8b1ed;
 }
 
@@ -1305,9 +1351,10 @@ button {
   padding: 8px 12px;
   cursor: pointer;
   z-index: 10; /* Les flèches seront au-dessus du carrousel */
-  font-size: 1.5em;
+  font-size: 1.41vw; /*1.5em*/
   /* border-radius: 5px; */
-  font-family: 'Caladea';
+  font-family: "Caladea", serif;
+  font-weight: 400;
 }
 
 button:hover{
@@ -1353,9 +1400,10 @@ button:active{
   
   .descriptions-oeuvres{
     height: auto;
-    font-family: "Caladea Regular";
+    font-family: "Caladea", serif;
+  font-weight: 400;
     color: #004b81;
-    font-size: 0.95em;
+    font-size: 0.89vw; /*0.95em*/
   }
 
 
@@ -1367,8 +1415,9 @@ button:active{
     gap: 1vw;
     background-color: #004b81;
     color: #e9e4d8;
-    font-family: "Caladea Regular";
-    font-size: 0.95em;
+    font-family: "Caladea", serif;
+    font-weight: 400;
+    font-size: 0.89vw; /*0.95em*/
     padding: 10%; 
   }
   
@@ -1394,8 +1443,9 @@ button:active{
     gap: 1vw;
     background-color: #ffb47e;
     color: #004b81;
-    font-family: "Caladea Regular";
-    font-size: 0.95em;
+    font-family: "Caladea", serif;
+    font-weight: 400;
+    font-size: 0.89vw; /*0.95em*/
     padding: 10%; 
     width:100%;
     box-sizing: border-box;
@@ -1429,8 +1479,9 @@ button:active{
     gap: 1vw;
     background-color:#343332;
     color: #e9e4d8;
-    font-family: "Caladea Regular";
-    font-size: 0.95em;
+    font-family: "Caladea", serif;
+    font-weight: 400;
+    font-size: 0.89vw; /*0.95em*/
     padding: 10%; 
     width:100%;
     box-sizing: border-box;
@@ -1453,8 +1504,9 @@ button:active{
     gap: 1vw;
     background-color:#343332;
     color: #e9e4d8;
-    font-family: "Caladea Regular";
-    font-size: 0.95em;
+    font-family: "Caladea", serif;
+    font-weight: 400;
+    font-size: 0.89vw; /*0.95em*/
     /* padding: 10%;  */
     width:100%;
     box-sizing: border-box;
@@ -1483,6 +1535,8 @@ button:active{
       overflow: hidden; /* Empêche le défilement horizontal et vertical */
       width: 100%; /* Empêche les dépassements horizontaux */
       height: 100%; /* Empêche les dépassements verticaux */
+      -webkit-font-smoothing: antialiased; /*pour un traitement de typo plus similaire à celui de chrome sur les autres navigateurs*/
+      -moz-osx-font-smoothing: grayscale; /*idem*/
     }
   
     body {
@@ -1550,8 +1604,9 @@ button:active{
     .titre-avertissement{
       /* display:block; */
       /* left:1.5em; */
-      font-family: "Wagon Bold";
-      font-size: 1.5em;
+      font-family: "Wagon", sans-serif;
+      font-weight: 700;
+      font-size: 1.41vw; /*1.5em*/
       color: #004b81;
       /* background-color: #161b27; */
       /* margin: 0 3em; */
@@ -1570,8 +1625,9 @@ button:active{
     .sous-titre-avertissement{
       /* position:absolute; */
       /* top:10vh; */
-      font-family: "Caladea Regular";
-      font-size: 1em;
+      font-family: "Caladea", serif;
+      font-weight: 400;
+      font-size: 0.94vw; /*1em*/
       color: #d8b1ed;
       background-color: #161b27;
       margin:0;
@@ -1592,14 +1648,15 @@ button:active{
 
     .texte-avertissement {
       display: flex;              /* Utilise Flexbox pour centrer le bloc */
-  justify-content: center;    /* Centre le bloc de texte horizontalement */
-  align-items: center;        /* Centre le bloc de texte verticalement */
-  text-align: left;           /* Aligne le texte à gauche à l'intérieur du bloc */
-  width: fit-content;         /* Ajuste la largeur du <p> à son contenu */
-  margin: 0 auto;             /* Centre le bloc de texte dans la grid */
+      justify-content: center;    /* Centre le bloc de texte horizontalement */
+      align-items: center;        /* Centre le bloc de texte verticalement */
+      text-align: left;           /* Aligne le texte à gauche à l'intérieur du bloc */
+      width: fit-content;         /* Ajuste la largeur du <p> à son contenu */
+      margin: 0 auto;             /* Centre le bloc de texte dans la grid */
       
-      font-family: "Caladea Regular", serif;
-      font-size: 1.1em;
+      font-family: "Caladea", serif;
+      font-weight: 400;
+      font-size: 1.03vw; /*1.1em*/
       color: #161b27;
       hyphens:none;
       padding: 0;
@@ -1609,13 +1666,14 @@ button:active{
 
     #footer-avertissement{
       position:absolute;
-      font-family: "Caladea Regular";
+      font-family: "Caladea", serif;
+  font-weight: 400;
       color: #161b27;
       bottom: 5vh;
       left:8vw;
       /* left: 50%; */
       /* transform: translate(-50%, -50%); */
-      font-size: 1em;
+      font-size: 0.94vw; /*1em*/
       line-height: 1.3;
       /* align-self: center;
       align-content: center; */
