@@ -1537,12 +1537,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+
 /* CALCUL DES TAILLES DES CONTENEURS <IMG> PAR RAPPORT AU RATIO DES IMAGES = forcage pour Safari*/
-    document.querySelectorAll(".single-image").forEach(img => {
+
+    document.querySelectorAll(".section-oeuvres img").forEach(img => {
     img.onload = function() {
-        this.style.aspectRatio = this.naturalWidth / this.naturalHeight;
+        let ratio = this.naturalHeight / this.naturalWidth;
+        this.style.height = (this.clientWidth * ratio) + "px"; // Ajuste la hauteur en fonction du ratio
     };
 });
+
+
 
     /* CAROUSEL D'IMAGES */
 

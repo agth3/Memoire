@@ -2,28 +2,32 @@
 
 @font-face {
   font-family: "Caladea";
-  src: url("asset/font/Caladea/Caladea-Regular.ttf");
+  src: url("asset/font/Caladea/Caladea-Regular.woff2");
+  /* src: url("asset/font/Caladea/Caladea-Regular.ttf"); */
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Caladea";
-  src: url("asset/font/Caladea/Caladea-Bold.ttf");
+  src: url("asset/font/Caladea/Caladea-Bold.woff2");
+  /* src: url("asset/font/Caladea/Caladea-Bold.ttf"); */
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Caladea";
-  src: url("asset/font/Caladea/Caladea-Italic.ttf");
+  src: url("asset/font/Caladea/Caladea-Italic.woff2");
+  /* src: url("asset/font/Caladea/Caladea-Italic.ttf"); */
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: "Caladea";
-  src: url("asset/font/Caladea/Caladea-BoldItalic.ttf");
+  src: url("asset/font/Caladea/Caladea-BoldItalic.woff2");
+  /* src: url("asset/font/Caladea/Caladea-BoldItalic.ttf"); */
   font-weight: 700;
   font-style: italic;
 }
@@ -31,21 +35,24 @@
   
 @font-face {
   font-family: "Wagon";
-  src: url("asset/font/Wagon/Wagon-Bold.otf");
+  src: url("asset/font/Wagon/Wagon-Bold.woff2");
+  /* src: url("asset/font/Wagon/Wagon-Bold.otf"); */
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Wagon";
-  src: url("asset/font/Wagon/Wagon-ExtraLight.otf");
+  src: url("asset/font/Wagon/Wagon-ExtraLight.woff2");
+  /* src: url("asset/font/Wagon/Wagon-ExtraLight.otf"); */
   font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Wagon";
-  src: url("asset/font/Wagon/Wagon-ExtraLightItalic.otf");
+  src: url("asset/font/Wagon/Wagon-ExtraLightItalic.woff2");
+  /* src: url("asset/font/Wagon/Wagon-ExtraLightItalic.otf"); */
   font-weight: 200;
   font-style: italic;
 }
@@ -1305,6 +1312,8 @@ input[type="range"]:focus {
   height: auto;
   margin:1.5vw 0 1.5vw 0;
   display: block;
+  object-fit: contain;
+  /* align-self: flex-start; */
   }
 
   .single-image {
@@ -1334,6 +1343,7 @@ input[type="range"]:focus {
   display: flex;
   transition: transform 0.5s ease-in-out;
   margin: 0 -1px;
+  align-items: center;
 }
 
 .carousel-track img {
