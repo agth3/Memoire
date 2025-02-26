@@ -54,7 +54,7 @@
                 <p class="texte-avertissement">Votre format d'écran n'est&nbsp;pas&nbsp;adapté pour&nbsp;une&nbsp;expérience optimale.</p>
                 <p class="texte-avertissement">Merci pour votre compréhension.</p>-->
                 <p class="texte-avertissement">Bienvenue&#8239;!
-                </br>Ce&nbsp;site a&nbsp;été&nbsp;conçu pour une&nbsp;visite sur&nbsp;ordinateur.
+                </br>Ce&nbsp;site a&nbsp;été&nbsp;conçu pour une&nbsp;visite sur&nbsp;ordinateur (via Google Chrome, Microsoft Edge ou&nbsp;Mozilla Firefox).
                 </br>Votre format d'écran n'est&nbsp;pas&nbsp;adapté pour&nbsp;une&nbsp;expérience optimale.
                 </br>Merci pour votre compréhension.</p>
                 <span id="footer-avertissement">Agathe Cotton
@@ -1535,6 +1535,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+
+
+/* CALCUL DES TAILLES DES CONTENEURS <IMG> PAR RAPPORT AU RATIO DES IMAGES = forcage pour Safari*/
+    document.querySelectorAll(".single-image").forEach(img => {
+    img.onload = function() {
+        this.style.aspectRatio = this.naturalWidth / this.naturalHeight;
+    };
+});
 
     /* CAROUSEL D'IMAGES */
 

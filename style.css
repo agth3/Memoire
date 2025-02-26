@@ -717,6 +717,7 @@ width: max-content;
 
 .zone-menu {
   position: sticky;
+  position: -webkit-sticky; /* Préfixe pour Safari */
   top: 0;
   background-color: #f5f5f5 /*#e9e4d8*/;
   box-shadow: 0px 2px 8px #e9e4d8;
@@ -886,6 +887,7 @@ margin:0;
 
 .bloc-jauge-fontsize {
   position: sticky;
+  position: -webkit-sticky; /* Préfixe pour Safari */
   display: inline-flex; /* Permet de gérer l'alignement interne */
   top: 0vh;
   background-color: #f5f5f5;
@@ -1286,7 +1288,7 @@ input[type="range"]:focus {
     flex-direction: column;
     align-items: center; /* Aligne verticalement les éléments */
     justify-content: center; /* Centre horizontalement les éléments */
-    gap: 1vw; /* Ajoute de l'espace entre les éléments */
+    /*gap: 1vw;  Ajoute de l'espace entre les éléments */
     background-color: #e9e4d8;
     padding: 8% 10% 10% 10%;
   }
@@ -1301,15 +1303,16 @@ input[type="range"]:focus {
   .section-oeuvres img{
   width: 85%;
   height: auto;
-  margin-top:1.5vw;
+  margin:1.5vw 0 1.5vw 0;
   display: block;
   }
 
   .single-image {
-    width: 85%;
+    /* width: 85%;
     height: auto;
     margin-top: 1.5vw;
-    display: block;
+    display: block; */
+    background-color: #e9e4d8;
 }
 
 /* Conteneur global qui contient tout, y compris les boutons */
@@ -1335,7 +1338,7 @@ input[type="range"]:focus {
 
 .carousel-track img {
   width: 100%; /* Chaque image occupe toute la largeur */
-  height: auto;
+  height: 100%; /*auto safari aime pas*/
   object-fit: contain;
   flex-shrink: 0;
 }
@@ -1606,7 +1609,7 @@ button:active{
       /* left:1.5em; */
       font-family: "Wagon", sans-serif;
       font-weight: 700;
-      font-size: 1.41vw; /*1.5em*/
+      font-size: clamp(1rem, 1.2vw, 1.5em); /* Anciennement 1.5em */
       color: #004b81;
       /* background-color: #161b27; */
       /* margin: 0 3em; */
@@ -1627,7 +1630,7 @@ button:active{
       /* top:10vh; */
       font-family: "Caladea", serif;
       font-weight: 400;
-      font-size: 0.94vw; /*1em*/
+      font-size: clamp(0.85rem, 0.85vw, 1em); /* Anciennement 1em */
       color: #d8b1ed;
       background-color: #161b27;
       margin:0;
@@ -1656,7 +1659,7 @@ button:active{
       
       font-family: "Caladea", serif;
       font-weight: 400;
-      font-size: 1.03vw; /*1.1em*/
+      font-size: clamp(0.9rem, 0.9vw, 1.1em); /* Anciennement 1.1em */
       color: #161b27;
       hyphens:none;
       padding: 0;
@@ -1673,7 +1676,7 @@ button:active{
       left:8vw;
       /* left: 50%; */
       /* transform: translate(-50%, -50%); */
-      font-size: 0.94vw; /*1em*/
+      font-size: clamp(0.85rem, 0.85vw, 1em); /* Anciennement 1em */
       line-height: 1.3;
       /* align-self: center;
       align-content: center; */
