@@ -39,6 +39,11 @@
   /* src: url("asset/font/Wagon/Wagon-Bold.otf"); */
   font-weight: 700;
   font-style: normal;
+  unicode-range: U+0020-007F, U+00E9, U+00E8, U+00EA, U+00EB, 
+  U+00E0, U+00E2, U+00E4, U+00F4, U+00F6, 
+  U+00F9, U+00FB, U+00FC, U+00E7, U+00EE, U+00EF, 
+  U+0153, U+0152, U+00E6, U+00C6, U+00AB, U+00BB, 
+  U+2026, U+2013, U+2014; /* Inclut les accents */
 }
 
 @font-face {
@@ -1425,7 +1430,7 @@ button:active{
 .section-notes{
     display: flex;
     flex-direction: column;
-    gap: 1vw;
+    /* gap: 1vw; */
     background-color: #004b81;
     color: #e9e4d8;
     font-family: "Caladea", serif;
@@ -1437,11 +1442,16 @@ button:active{
   #titre-notes{
     color: #faadde;
     scroll-margin-top: 5vh;
+    margin: 1vw 0 0.5vw 0;
   }
 
   #schema-note-4{
     width:100%;
     margin-bottom: 0.75vh;
+  }
+
+  .notes{
+    margin:0.5vw 0 0.5vw 0;
   }
 
   /* .notes{
@@ -1450,10 +1460,14 @@ button:active{
 
 /* Section Bibliographie */
 
+.bibliographie{
+  margin:0.5vw 0 0.5vw 0;
+}
+
 .section-bibliographie{
     display: flex;
     flex-direction: column;
-    gap: 1vw;
+    /* gap: 1vw; */
     background-color: #ffb47e;
     color: #004b81;
     font-family: "Caladea", serif;
@@ -1467,11 +1481,13 @@ button:active{
   #titre-bibliographie{
     color:#274e12;
     scroll-margin-top: 5vh;
+    margin: 1vw 0 0.5vw 0;
   }
 
   .sous-titres-biblio{
-    margin:0;
+    /* margin:0; */
     color: #274e12;
+    margin:1.5vw 0 1vw 0;
   }
 
   /* .bibliographie{
@@ -1489,7 +1505,7 @@ button:active{
   .section-credits{
     display: flex;
     flex-direction: column;
-    gap: 1vw;
+    /* gap: 1vw; */
     background-color:#343332;
     color: #e9e4d8;
     font-family: "Caladea", serif;
@@ -1507,10 +1523,11 @@ button:active{
 
   .sous-titres-credits{
     color: #ffb47e;
-    margin-bottom:0;
+    /* margin-bottom:0; */
+    margin:1.5vw 0 1vw 0;
   }
 
-  .section-credits p{
+  .descriptions-credits{
     /* display: flex;
     flex-direction: column; */
     text-align:left;
@@ -1523,10 +1540,13 @@ button:active{
     /* padding: 10%;  */
     width:100%;
     box-sizing: border-box;
-    margin: 0;
+    /* margin: 0; */
+    margin:0.5vw 0 0.5vw 0;
   }
 
-
+  .credits{
+    margin:0.5vw 0 0.5vw 0;
+  }
 /*--------- AVERTISSEMENT POUR PETITE TAILLE D'ECRAN ---------*/
 
 #avertissement {
