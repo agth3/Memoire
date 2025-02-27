@@ -39,10 +39,10 @@
   src: url("asset/font/Wagon/Wagon-Bold.otf");
   font-weight: 700;
   font-style: normal;
-  unicode-range: U+0020-007F, U+00E9, U+00E8, U+00EA, U+00EB, 
+  /* unicode-range: U+0020-007F, U+00E9, U+00E8, U+00EA, U+00EB, 
   U+00E0, U+00E2, U+00E4, U+00F4, U+00F6, 
   U+00F9, U+00FB, U+00FC, U+00E7, U+00EE, U+00EF, 
-  U+0153, U+0152, U+00E6, U+00C6;
+  U+0153, U+0152, U+00E6, U+00C6; */
 }
 
 @font-face {
