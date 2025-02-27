@@ -1373,7 +1373,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         /* SCRIPT POUR COLLER LE REGLAGE DE TAILLE DE TEXTE EN DESSOUS DU MENU */
 
-        function ajusterPositionJauge() {
+ /*       function ajusterPositionJauge() {
     let menu = document.querySelector(".zone-menu");
     let jauge = document.querySelector(".bloc-jauge-fontsize");
 
@@ -1392,8 +1392,25 @@ let menuObserver = new ResizeObserver(ajusterPositionJauge);
 let menuElement = document.querySelector(".zone-menu");
 if (menuElement) {
     menuObserver.observe(menuElement);
+}*/
+
+
+function ajusterPositionJauge() {
+    let menu = document.querySelector(".zone-menu");
+    if (menu) {
+        let hauteurMenu = menu.offsetHeight;
+        document.documentElement.style.setProperty("--hauteur-menu", (hauteurMenu - 2) + "px"); //2 px pour éviter une petite marge entre le T et le menu
+    }
 }
 
+window.addEventListener("DOMContentLoaded", ajusterPositionJauge);
+window.addEventListener("resize", ajusterPositionJauge);
+
+// Observer les changements de taille du menu
+let menuObserver = new ResizeObserver(ajusterPositionJauge);
+if (menu) {
+    menuObserver.observe(menu);
+}
 
 
 /* JAUGE DE LA TAILLE DE LA TYPO */

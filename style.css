@@ -2,32 +2,32 @@
 
 @font-face {
   font-family: "Caladea";
-  src: url("asset/font/Caladea/Caladea-Regular.woff2");
-  /* src: url("asset/font/Caladea/Caladea-Regular.ttf"); */
+  /* src: url("asset/font/Caladea/Caladea-Regular.woff2"); */
+  src: url("asset/font/Caladea/Caladea-Regular.ttf");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Caladea";
-  src: url("asset/font/Caladea/Caladea-Bold.woff2");
-  /* src: url("asset/font/Caladea/Caladea-Bold.ttf"); */
+  /* src: url("asset/font/Caladea/Caladea-Bold.woff2"); */
+  src: url("asset/font/Caladea/Caladea-Bold.ttf");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Caladea";
-  src: url("asset/font/Caladea/Caladea-Italic.woff2");
-  /* src: url("asset/font/Caladea/Caladea-Italic.ttf"); */
+  /* src: url("asset/font/Caladea/Caladea-Italic.woff2"); */
+  src: url("asset/font/Caladea/Caladea-Italic.ttf");
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: "Caladea";
-  src: url("asset/font/Caladea/Caladea-BoldItalic.woff2");
-  /* src: url("asset/font/Caladea/Caladea-BoldItalic.ttf"); */
+  /* src: url("asset/font/Caladea/Caladea-BoldItalic.woff2"); */
+  src: url("asset/font/Caladea/Caladea-BoldItalic.ttf");
   font-weight: 700;
   font-style: italic;
 }
@@ -35,29 +35,28 @@
   
 @font-face {
   font-family: "Wagon";
-  src: url("asset/font/Wagon/Wagon-Bold.woff2");
-  /* src: url("asset/font/Wagon/Wagon-Bold.otf"); */
+  /* src: url("asset/font/Wagon/Wagon-Bold.woff2"); */
+  src: url("asset/font/Wagon/Wagon-Bold.otf");
   font-weight: 700;
   font-style: normal;
   unicode-range: U+0020-007F, U+00E9, U+00E8, U+00EA, U+00EB, 
   U+00E0, U+00E2, U+00E4, U+00F4, U+00F6, 
   U+00F9, U+00FB, U+00FC, U+00E7, U+00EE, U+00EF, 
-  U+0153, U+0152, U+00E6, U+00C6, U+00AB, U+00BB, 
-  U+2026, U+2013, U+2014; /* Inclut les accents */
+  U+0153, U+0152, U+00E6, U+00C6;
 }
 
 @font-face {
   font-family: "Wagon";
-  src: url("asset/font/Wagon/Wagon-ExtraLight.woff2");
-  /* src: url("asset/font/Wagon/Wagon-ExtraLight.otf"); */
+  /* src: url("asset/font/Wagon/Wagon-ExtraLight.woff2"); */
+  src: url("asset/font/Wagon/Wagon-ExtraLight.otf");
   font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Wagon";
-  src: url("asset/font/Wagon/Wagon-ExtraLightItalic.woff2");
-  /* src: url("asset/font/Wagon/Wagon-ExtraLightItalic.otf"); */
+  /* src: url("asset/font/Wagon/Wagon-ExtraLightItalic.woff2"); */
+  src: url("asset/font/Wagon/Wagon-ExtraLightItalic.otf");
   font-weight: 200;
   font-style: italic;
 }
@@ -898,10 +897,15 @@ margin:0;
 /* STYLE DE LA JAUGE DE TEXTE */
 
 .bloc-jauge-fontsize {
+  
+    /* position: sticky;
+    position: -webkit-sticky; */
+    top: var(--hauteur-menu, 0px); /* Utilise une variable CSS modifiable */
+
   position: sticky;
   position: -webkit-sticky; /* Préfixe pour Safari */
   display: inline-flex; /* Permet de gérer l'alignement interne */
-  top: 0vh;
+  /* top: 0vh; */
   background-color: #f5f5f5;
   left: 2%;
   z-index: 9;
